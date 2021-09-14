@@ -1,0 +1,3 @@
+[submodule "actividad_integradora"]
+	path = analisis_y_diseño_de_algoritmos_avanzados/algorithms
+	url = https://github.com/Ax010tl/algorithms.git

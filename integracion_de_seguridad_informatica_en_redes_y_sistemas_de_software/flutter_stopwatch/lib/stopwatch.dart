@@ -33,7 +33,7 @@ class StopWatchState extends State<StopWatch>{
 	}
 
 	void _startTimer(){
-		timer = Timer.periodic(Duration(seconds: 1), _onTick);
+		timer = Timer.periodic(Duration(milliseconds: 1), _onTick);
 		laps.clear();
 		setState((){
 			isTicking = true;
