@@ -15,3 +15,6 @@ Available commands are:
 - `remove` Deletes a note from the file 
 
 You can use the `--help` command to get more info. 
+
+## Improvements
+Improvements could be made to increase the efficiency and usability of the utility, such as storing notes as key-value pairs inside an object instead of an array of objects, but this is only a proof of concept. 
