@@ -1,3 +1,15 @@
 [submodule "actividad_integradora"]
 	path = analisis_y_diseño_de_algoritmos_avanzados/algorithms
 	url = https://github.com/Ax010tl/algorithms.git
+[submodule "integracion_de_seguridad_informatica_en_redes_y_sistemas_de_software/practicas-dif"]
+	path = integracion_de_seguridad_informatica_en_redes_y_sistemas_de_software/practicas-dif
+	url = https://github.com/vpinedagon2000/practicas-dif.git
+[submodule "analisis_y_diseño_de_algoritmos_avanzados/5-kruskal-minimum-spanning-trees-villalpando-badillo"]
+	path = analisis_y_diseño_de_algoritmos_avanzados/5-kruskal-minimum-spanning-trees-villalpando-badillo
+	url = https://github.com/Chang-Luevano/5-kruskal-minimum-spanning-trees-villalpando-badillo.git
+[submodule "analisis_y_diseño_de_algoritmos_avanzados/6-prim-minimum-spanning-trees-villalpando-badillo"]
+	path = analisis_y_diseño_de_algoritmos_avanzados/6-prim-minimum-spanning-trees-villalpando-badillo
+	url = https://github.com/Chang-Luevano/6-prim-minimum-spanning-trees-villalpando-badillo.git
+[submodule "analisis_y_diseño_de_algoritmos_avanzados/7-floyd-warshall-shortest-path-villalpando-badillo"]
+	path = analisis_y_diseño_de_algoritmos_avanzados/7-floyd-warshall-shortest-path-villalpando-badillo
+	url = https://github.com/Chang-Luevano/7-floyd-warshall-shortest-path-villalpando-badillo.git
