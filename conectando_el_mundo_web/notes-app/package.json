@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "chalk": "^4.1.2",
     "yargs": "^17.2.1"

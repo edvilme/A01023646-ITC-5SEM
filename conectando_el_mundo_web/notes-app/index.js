@@ -1,6 +1,8 @@
 const yargs = require('yargs');
 const notes = require('./notes');
 
+yargs.version('0.0.1')
+
 // Add (create) note
 yargs.command({
     command: 'add', 
