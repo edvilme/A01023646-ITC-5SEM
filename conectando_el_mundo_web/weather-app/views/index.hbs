@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            align-items: stretch;
+            background-image: url({{background.src.large2x}});
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        aside{
+            width: 300px;
+            flex-shrink: 0;
+            overflow: auto;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+            aside>h2{
+                {{!-- margin: 16px; --}}
+            }
+            aside>form{
+                display: flex;
+                align-items: center;
+            }
+                aside>form>input{
+                    padding: 8px;
+                }
+                aside>form>input[type="text"]{
+                    flex: 1
+                }
+            aside>ul{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+                aside>ul>li{
+                    padding: 16px 0px;
+                    margin-top: 8px;
+                    margin-bottom: 8px;
+                    font-size: 1.5rem;
+                    font-weight: bolder;
+                    border-radius: 8px;
+                }
+                aside>ul>li:hover{
+                    backdrop-filter: blur(16px) brightness(150%) invert(10%);
+                }
+                    aside>ul>li>a{
+                        text-decoration: none;
+                        color: inherit;
+                    }
+        main{
+            height: 100%;
+            width: 100%;
+            flex: 1;
+        }
+            header, section{
+                width: 100%;
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 16px;
+                box-sizing: border-box
+            }
+                header>*{
+                    margin-top: 0.5rem;
+                    margin-bottom: 0.5rem;
+                    display: block
+                }
+            #city{
+                font-weight: bold;
+                font-size: 2rem;
+            }
+            #temperature{
+                float: right;
+                font-size: 4rem
+            }
+
+            section{
+                display: flex;
+                column-gap: 16px;
+                row-gap: 16px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            section>div{
+                height: 150px;
+                width: 150px;
+                padding: 16px;
+                border-radius: 16px;
+                backdrop-filter: blur(16px) brightness(120%);
+
+            }
+            section>div>p{
+                font-size: 2rem;
+            }
+
+        #city, #locations{
+            text-transform: capitalize;
+        }
+        footer{
+            text-align: center;
+        }
+    </style>
+    <title>Weather in {{city}}</title>
+</head>
+<body>
+    <aside>
+        <h2>Weather App</h2>
+        <form action="" id="add">
+            <input type="text" name="add_location" id="add_location" placeholder="Search location">
+            <input type="submit" value="+">
+        </form>
+        <hr>
+        <ul id="locations">
+        </ul>
+    </aside>
+    <main>
+        <header>
+            <span id="temperature">{{weather.current.temperature}}ºC</span>
+            <h1 id="city">{{city}}</h1>
+            <p id="time">{{weather.location.localtime}}</p>
+            <strong id="contition">{{weather.current.weather_descriptions.[0]}}</strong>
+        </header>
+        <section>
+            <div id="uv_index">
+                <strong>UV Index</strong>
+                <p>{{weather.current.uv_index}}</p>
+            </div>
+            <div id="feelslike">
+                <strong>Feels like</strong>
+                <p>{{weather.current.feelslike}}º</p>
+            </div>
+            <div id="precipitation">
+                <strong>Precipitation</strong>
+                <p>{{weather.current.precip}}mm</p>
+            </div>
+            <div id="humidity">
+                <strong>Humidity</strong>
+                <p>{{weather.current.humidity}}%</p>
+            </div>
+            <div id="visibility">
+                <strong>Visibility</strong>
+                <p>{{weather.current.visibility}}km</p>
+            </div>
+            <div id="pressure">
+                <strong>Pressure</strong>
+                <p>{{weather.current.pressure}}hPa</p>
+            </div>
+        </section>
+        <footer>
+            <p>
+                Background image by <a href="{{background.photographer_url}}">{{photographer}}</a> obtained from <a href="http://pexels.com">pexels</a>
+            </p>
+            <p>
+                Weather info from <a href="http://weatherstack.com">Weather Stack</a>
+            </p>
+            <p>
+                Made with ❤️ by <a href="http://edvilme.me">Eduardo Villalpando Mello</a>
+            </p>
+        </footer>
+    </main>
+    <script>
+        function pushToLocalStorage(key, value){
+            // Get current contents
+            const data = JSON.parse(localStorage.getItem(key)) || [];
+            // Get as set
+            const dataSet = new Set([...data])
+            // Push
+            dataSet.add(value.toLowerCase());
+            // Set
+            localStorage.setItem(key, JSON.stringify([...dataSet]))
+        }
+        pushToLocalStorage('locations', 'Mexico City')
+        document.querySelector('#add').addEventListener('submit', e=>{
+            e.preventDefault();
+            const city =  document.querySelector('#add_location').value;
+            pushToLocalStorage('locations', city)
+            window.location.href = '/city/' + city;
+        })
+        
+        JSON.parse(localStorage.getItem('locations') || "[]").forEach(item=>{
+            let li = `<li><a href="/city/${item}">${item}</a></li>`
+            document.querySelector('#locations').innerHTML += li;
+        })
+
+    </script>
+</body>
+</html>
