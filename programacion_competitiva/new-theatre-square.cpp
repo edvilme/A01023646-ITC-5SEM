@@ -12,11 +12,9 @@ int getPrice(vv_char square, int x, int y){
         while(i < square_row.size()){
             int o_i = i;
             if(areBigTilesCheaper && i<square_row.size() -1 && square_row[i] == '.' && square_row[i+1] == '.'){
-                // cout<<"("<<square_row[i]<<square_row[i+1]<<")";
                 price+=y;
                 i+=2;
             } else {
-                // cout<<"("<<square_row[i]<<")";
                 if(square_row[i] == '.') price+=x;
                 i++;
             }

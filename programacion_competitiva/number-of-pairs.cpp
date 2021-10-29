@@ -22,13 +22,6 @@ void countIndicesOrdered(vector<int> A, int l, int r){
     sort(A.begin(), A.end());
     int count = 0;
     int maxSize = A.size();
-    int i = 0;
-    int j = 0;
-    while(i < A.size()-1 && j < A.size()){
-        if(A[i] > r) break;
-        if(A[])
-    }
-
     for(size_t i = 0; i < maxSize-1; i++){
         if(A[i]>r) break;
         // if(A[i]<l) continue;
