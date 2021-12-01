@@ -13,3 +13,21 @@
 [submodule "analisis_y_diseño_de_algoritmos_avanzados/7-floyd-warshall-shortest-path-villalpando-badillo"]
 	path = analisis_y_diseño_de_algoritmos_avanzados/7-floyd-warshall-shortest-path-villalpando-badillo
 	url = https://github.com/Chang-Luevano/7-floyd-warshall-shortest-path-villalpando-badillo.git
+[submodule "modelacion_de_sistemas_multiagentes_con_graficas_computacionales/TareasAgentirijillos"]
+	path = modelacion_de_sistemas_multiagentes_con_graficas_computacionales/TareasAgentirijillos
+	url = https://github.com/EdgarRostro/TareasAgentirijillos.git
+[submodule "analisis_y_diseño_de_algoritmos_avanzados/8-ford-fulkerson-maximum-flow-villalpando-badillo"]
+	path = analisis_y_diseño_de_algoritmos_avanzados/8-ford-fulkerson-maximum-flow-villalpando-badillo
+	url = https://github.com/Chang-Luevano/8-ford-fulkerson-maximum-flow-villalpando-badillo.git
+[submodule "modelacion_de_sistemas_multiagentes_con_graficas_computacionales/Cochecitos.wiki"]
+	path = modelacion_de_sistemas_multiagentes_con_graficas_computacionales/Cochecitos.wiki
+	url = https://github.com/EdgarRostro/Cochecitos.wiki.git
+[submodule "modelacion_de_sistemas_multiagentes_con_graficas_computacionales/Cochecitos"]
+	path = modelacion_de_sistemas_multiagentes_con_graficas_computacionales/Cochecitos
+	url = https://github.com/EdgarRostro/Cochecitos.git
+[submodule "analisis_y_diseño_de_algoritmos_avanzados/actividad-integradora-2-vale-lalo-lulu"]
+	path = analisis_y_diseño_de_algoritmos_avanzados/actividad-integradora-2-vale-lalo-lulu
+	url = https://github.com/Chang-Luevano/actividad-integradora-2-vale-lalo-lulu.git
+[submodule "analisis_y_diseño_de_algoritmos_avanzados/10-shape-context-villalpando-badillo"]
+	path = analisis_y_diseño_de_algoritmos_avanzados/10-shape-context-villalpando-badillo
+	url = https://github.com/Chang-Luevano/10-shape-context-villalpando-badillo.git
